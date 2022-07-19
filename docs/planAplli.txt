@@ -1,0 +1,26 @@
+Taxi Me 
+
+
+1: page log ( je me connecte mail/mdp , bioAuth ; je créer un compte)
+
+1b : création de compte ( creer mail, mdp , nom, prénom , alimentation compte euro , adresse préféré )
+
+2: page acceuil ( logo moncompte, logo demander taxi , logo nous contacter )
+
+3: mon compte ( logo modif mes infos, logo modif mon solde , modif mes adresses )
+
+3b: mes infos (champs modifiable champs modifiable nom/prénom/mail/mdp/)
+
+3c :mon solde ( montant solde , bouton ajouter/retirer fond )
+
+3d mes adresse ( ajout/suppression adresse préférees)
+
+4 Taxi me ( d'ou partez-vous ? (adresse préfére ou ajout adresse ou localisation )
+
+4b heure de départ souhaité et nb personnes ( maintenant , ou choix horaire ; nb de personne , bagages ? )
+
+4c destination ( d'ou partez-vous ? (adresse préfére ou ajout adresse ou localisation )
+
+4d estimation prix trajet ; valider oui / retour ( si valider envoie notif avec estimation temps d'attente et n° commande)
+
+5 Contact ( formulaire contact, n° tel, Faq)
