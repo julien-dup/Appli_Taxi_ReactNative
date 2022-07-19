@@ -9,8 +9,8 @@ const SignInScreen = () => {
                 <View style={{alignItems: 'center'}}>
                     <Text style={{fontSize: 32}}>Bienvenue !</Text>
                 </View>
-                <View>
-                    <Text>Merci de renseigner les champs suivant</Text>
+                <View style={{marginTop: 24, alignItems: 'center'}}>
+                    <Text style={{fontSize: 24}}>Merci de renseigner les champs suivants :</Text>
                 </View>
                 <SignIn />
             </View>

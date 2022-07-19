@@ -13,9 +13,14 @@ const SignIn = () => {
   
 
   function checkPassword() {
-      if(mdp === mdp2) setDisplayButton(false)
+    console.log(mail)
+      if(mdp === mdp2 ) {
+        setDisplayButton(false)
       setOpacityButton(1)
       console.log(mdp +' '+ mdp2)
+      }else {
+        window.alert('les mots de passe ne sont pas identiques')
+      }
   }
 
 
@@ -23,15 +28,15 @@ const SignIn = () => {
     auth()
   .createUserWithEmailAndPassword(mail, mdp)
   .then(() => {
-    console.log('User account created & signed in!');
+    window.alert('Votre enregistrement a bien été effectué');
   })
   .catch(error => {
     if (error.code === 'auth/email-already-in-use') {
-      console.log('That email address is already in use!');
+      window.alert('Cette adresse mail est déjà enregistré');
     }
 
     if (error.code === 'auth/invalid-email') {
-      console.log('That email address is invalid!');
+      window.alert('Adresse mail non valide !');
     }
 
     console.error(error);
@@ -53,6 +58,7 @@ const SignIn = () => {
       label="mot de passe"
       value={mdp}
       onChangeText={text => setMdp(text)}
+      onBlur={()=>checkPassword()}
     />
   </View>
 
@@ -65,12 +71,12 @@ const SignIn = () => {
         />
     </View>
 
-  <View style={{marginTop: 24, alignItems: 'center'}}>
+  <View style={{marginTop: 32, alignItems: 'center'}}>
             <TouchableOpacity 
-            style={{padding: 8, alignItems: 'center', backgroundColor: 'blue', opacity: opacityButton}}
+            style={{padding: 32, alignItems: 'center', backgroundColor: 'blue', opacity: opacityButton, borderRadius: 10}}
             onPress={()=>createUser()}
             disabled= {displayButton}>
-                <Text style={{color: 'white'}}>VALIDER</Text>
+                <Text style={{color: 'white', fontSize: 24}}>VALIDER</Text>
             </TouchableOpacity>
     </View>
 

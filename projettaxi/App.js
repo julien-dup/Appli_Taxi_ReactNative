@@ -26,7 +26,6 @@ import SignInScreen from './src/Screens/SignInScreen';
 const App = () => {
   return(
     <View>
-      <Text>Database connected</Text>
       <SignInScreen/>
     </View>
   )
