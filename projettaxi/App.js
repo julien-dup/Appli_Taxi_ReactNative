@@ -16,8 +16,8 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import SignIn from './src/Components/SignIn';
-import SignInScreen from './src/Screens/SignInScreen';
+import StackNavigatorLogIn from './src/Navigation/StacknavigationLogin';
+import LogInScreen from './src/Screens/LoginScreen';
 
 
 
@@ -25,9 +25,9 @@ import SignInScreen from './src/Screens/SignInScreen';
 
 const App = () => {
   return(
-    <View>
-      <SignInScreen/>
-    </View>
+    
+      <StackNavigatorLogIn />
+    
   )
 }
   
