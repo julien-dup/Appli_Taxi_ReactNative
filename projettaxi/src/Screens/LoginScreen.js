@@ -14,7 +14,7 @@ const LogInScreen = ({navigation}) => {
           .signInWithEmailAndPassword(mail, mdp)
           .then(userCredentials => {
             const user = userCredentials.user;
-            console.log(user.email)
+            console.log(user.uid)
             window.alert('connecté avec :' + user.email);
             navigation.navigate('Home')
           })
@@ -22,12 +22,12 @@ const LogInScreen = ({navigation}) => {
       }
 
     return(
-    <View>
+    <View style={{backgroundColor: 'black', flex: 1}}>
         <View style={{alignItems: 'center'}}>
-                <Text style={{fontSize: 32}}>Bienvenue !</Text>
+                <Text style={{fontSize: 32, color:'white'}}>Bienvenue </Text>
         </View>
         <View style={{alignItems: 'center', marginTop: 24}}>
-                <Text style={{fontSize: 24}}>Connecter-vous avec vos identifiants</Text>
+                <Text style={{fontSize: 24, color: 'white'}}>Connecter-vous avec vos identifiants</Text>
         </View>
 
         <View style={{margin: 24}}>
@@ -49,7 +49,7 @@ const LogInScreen = ({navigation}) => {
 
             <View style={{marginTop: 32, alignItems: 'center'}}>
                 <TouchableOpacity 
-                style={{padding: 32, alignItems: 'center', backgroundColor: 'blue', borderRadius: 10}}
+                style={{padding: 32, alignItems: 'center', backgroundColor: 'orange', borderRadius: 10}}
                 onPress={()=>handleLogin()}
                 >
                     <Text style={{color: 'white', fontSize: 24}}>VALIDER</Text>
@@ -59,14 +59,14 @@ const LogInScreen = ({navigation}) => {
 
         <View style={{alignItems: 'center', marginTop: 32}}>
             <TouchableOpacity>
-                    <Text style={{fontSize: 18}}>Connecter-vous par lecteur d'emprunte digitale </Text>
+                    <Text style={{fontSize: 18, color: 'white'}}>Connecter-vous par lecteur d'emprunte digitale </Text>
             </TouchableOpacity>
         </View>
 
         <View style={{alignItems: 'center', marginTop: 32}}>
             <TouchableOpacity
             onPress={() => navigation.navigate('SignIn')}>
-                    <Text style={{fontSize: 18}}>Créer un compte </Text>
+                    <Text style={{fontSize: 18, color:'white'}}>Créer un compte </Text>
             </TouchableOpacity>
         </View>
     </View>

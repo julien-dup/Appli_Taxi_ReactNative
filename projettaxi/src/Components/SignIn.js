@@ -45,7 +45,7 @@ const SignIn = () => {
 
   return (
 <View style={{margin: 24}}>
-        <View>
+      <View style={styles.input}>
           <TextInput
       label="Email"
       value={mail}
@@ -93,9 +93,12 @@ export default SignIn
 const styles = StyleSheet.create({
   input: {
     marginTop: 24
-  }
+  },
+  text: {
+    fontSize: 24,
+    color: 'white'
+}
 })
-
 
 
 

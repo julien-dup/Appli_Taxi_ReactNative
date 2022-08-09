@@ -1,16 +1,16 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text , StyleSheet} from "react-native";
 import SignIn from "../Components/SignIn";
 
 const SignInScreen = () => {
     return(
-        <View>
+        <View style={{flex: 1 , backgroundColor: 'black'}}>
             <View >
                 <View style={{alignItems: 'center'}}>
-                    <Text style={{fontSize: 32}}>Bienvenue !</Text>
+                    <Text style={styles.text}>Quleques informations...</Text>
                 </View>
                 <View style={{marginTop: 24, alignItems: 'center'}}>
-                    <Text style={{fontSize: 24}}>Merci de renseigner les champs suivants :</Text>
+                    <Text style={styles.text}>Merci de renseigner les champs suivants :</Text>
                 </View>
                 <SignIn />
             </View>
@@ -19,3 +19,10 @@ const SignInScreen = () => {
 }
 
 export default SignInScreen
+
+const styles = StyleSheet.create({
+    text: {
+        fontSize: 24,
+        color: 'white'
+    }
+})

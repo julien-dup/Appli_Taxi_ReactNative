@@ -5,8 +5,8 @@ import { TextInput } from 'react-native-paper';
 
 const Login = () => {
 
-    const [mail, setMail] = useState("");
-    const [mdp, setMdp] = useState(""); 
+    const [mail, setMail] = useState("testy@test.fr");
+    const [mdp, setMdp] = useState("testytest"); 
 
     const handleLogin = () => {
         auth()
@@ -43,7 +43,7 @@ const Login = () => {
 
         <View style={{marginTop: 32, alignItems: 'center'}}>
             <TouchableOpacity 
-            style={{padding: 32, alignItems: 'center', backgroundColor: 'blue', borderRadius: 10}}
+            style={{padding: 32, alignItems: 'center', backgroundColor: 'orange', borderRadius: 10}}
             onPress={()=>handleLogin()}
             >
                 <Text style={{color: 'white', fontSize: 24}}>VALIDER</Text>
